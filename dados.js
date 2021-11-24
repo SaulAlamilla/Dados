@@ -12,11 +12,9 @@ function JuegoDados(numeroJuego, j1, j2){
     this.numeroJuego = numeroJuego;
     this.jugador1 = j1;
     this.jugador2 = j2;
-
     this.tirarDados = function() {
         this.jugador1.caraDado1 = (Math.floor(Math.random()*6)+1); //usar random(1,6)
         this.jugador1.caraDado2 = (Math.floor(Math.random()*6)+1); //usar random(1,6)
-
         this.jugador2.caraDado1 = (Math.floor(Math.random()*6)+1); //usar random(1,6)
         this.jugador2.caraDado2 = (Math.floor(Math.random()*6)+1); //usar random(1,6)
     }
@@ -38,7 +36,6 @@ let pedro = new Jugador("Pedro Sánchez");
 let antonio = new Jugador("Antonio Ramírez");
 let juego1 = new JuegoDados(1, pedro, antonio);
 let ganador;
-
 Jugador.prototype.juegosGanados=0;
 
 do {
@@ -60,6 +57,4 @@ if (juego1.jugador1.juegosGanados == 3){
 }else{
     console.log("Antonio Ramírez ganó el torneo");
 }
-
-
 //Determinar el primer ganador de 3 juegos y cuantos juegos hubo
